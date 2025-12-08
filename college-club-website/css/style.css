@@ -1,0 +1,293 @@
+/* =========================================
+   Global Styles - style.css
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f3f5f9;
+    color: #222;
+}
+
+/* A reusable container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* =========================================
+   Navigation Bar (Common on all pages)
+   Using Flexbox
+   ========================================= */
+
+.navbar {
+    background-color: #1a237e;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.navbar .nav-container {
+    display: flex;                 /* Flexbox */
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 0;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;                 /* Flexbox */
+    gap: 18px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding-bottom: 2px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    border-bottom: 2px solid #ffca28;
+}
+
+/* =========================================
+   Footer (Common)
+   ========================================= */
+
+footer {
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 30px;
+    background-color: #1a237e;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+/* =========================================
+   Home Page Styles
+   ========================================= */
+
+.hero {
+    background-color: #ffffff;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #1a237e;
+}
+
+.hero p {
+    margin-bottom: 10px;
+}
+
+.hero-subtext {
+    margin-top: 5px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Using float for layout here (3 small info boxes) */
+
+.highlight-boxes {
+    margin-top: 25px;
+    overflow: auto;              /* Clear floats */
+}
+
+.highlight-box {
+    width: 30%;
+    min-width: 200px;
+    background-color: #e8eaf6;
+    padding: 15px;
+    margin-right: 3.333%;
+    margin-bottom: 15px;
+    float: left;                 /* FLOAT usage */
+    border-radius: 8px;
+    border: 1px solid #c5cae9;
+}
+
+.highlight-box:last-child {
+    margin-right: 0;
+}
+
+.highlight-box h3 {
+    margin-bottom: 5px;
+    font-size: 1.05rem;
+    color: #283593;
+}
+
+/* =========================================
+   About Page Styles
+   ========================================= */
+
+.about-section {
+    background-color: #ffffff;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.about-section h1 {
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+
+/* Float: image with text around it */
+
+.about-image {
+    float: right;                 /* FLOAT usage */
+    width: 260px;
+    max-width: 40%;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* Clear float after the section text */
+.about-section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* =========================================
+   Events Page Styles
+   ========================================= */
+
+.events-section {
+    background-color: #ffffff;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.events-section h1 {
+    color: #1a237e;
+    margin-bottom: 8px;
+}
+
+/* Flexbox for event cards */
+
+.events-grid {
+    display: flex;                /* FLEXBOX usage */
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.event-card {
+    flex: 1 1 240px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #3949ab;   /* Border required */
+    background-color: #e8eaf6;   /* Background required */
+}
+
+.event-card h3 {
+    margin-bottom: 5px;
+    color: #283593;
+    font-size: 1.05rem;
+}
+
+.event-card p {
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   Join Page Styles
+   ========================================= */
+
+.join-section {
+    background-color: #ffffff;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.join-section h1 {
+    color: #1a237e;
+    margin-bottom: 8px;
+}
+
+.join-form {
+    max-width: 420px;
+    margin: 15px auto 0 auto;
+}
+
+.join-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.join-form input,
+.join-form select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #b0bec5;
+    font-size: 0.95rem;
+}
+
+.join-form input:focus,
+.join-form select:focus {
+    outline: none;
+    border-color: #3949ab;
+}
+
+.join-form button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background-color: #3949ab;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.join-form button:hover {
+    opacity: 0.95;
+}
+
+/* Small responsive tweak (basic) */
+@media (max-width: 768px) {
+    .highlight-box {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .navbar .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
